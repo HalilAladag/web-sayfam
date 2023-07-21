@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;600&display=swap');
+
+.sk-container {
+  text-align: left;
+  margin-left: 9%;
+  margin-right: 10%;
+  margin-top: 6%;
+}
+
+.sk-title {
+  margin-bottom: 2rem;
+  color: #1F2937;
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+    line-height: 48px;
+  ;
+}
+
+
+.sk-texts {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1%;
+}
+
+.js,
+.react,
+.css,
+.redux,
+.node,
+.cypress {
+  flex-basis: 32%;
+  margin-bottom: 10px;
+}
+
+.sk-texts h2 {
+  color: var(--default-indigo-700, #4338CA);
+  font-family: Inter;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  font-weight: bold;
+}
+
+.sk-texts p {
+  color: var(--default-gray-500, #6B7280);
+  font-family: Inter;
+  font-size: 0.7rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.sk-container.dark {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.sk-title.dark {
+  color: #fff;
+}
+
+.sk-texts.dark h2 {
+  color: #fff;
+}
+
+.sk-texts.dark p {
+  color: #fff;
+}
