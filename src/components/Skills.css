@@ -70,3 +70,40 @@
 .sk-texts.dark p {
   color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+  .sk-container {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 4%;
+  }
+
+  .sk-title {
+    font-size: 1.5rem;
+    line-height: 32px;
+  }
+
+  .sk-texts {
+    gap: 2%;
+  }
+
+  .js,
+  .react,
+  .css,
+  .redux,
+  .node,
+  .cypress {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+
+  .sk-texts h2 {
+    font-size: 1.5rem;
+    line-height: 32px;
+  }
+
+  .sk-texts p {
+    font-size: 0.8rem;
+    line-height: 20px;
+  }
+}

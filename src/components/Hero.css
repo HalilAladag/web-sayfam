@@ -143,3 +143,61 @@ html {
 .greetings.dark p {
   color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-container-left,
+  .hero-container-right {
+    margin: 0;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    max-width: 30rem;
+    text-align: center;
+  }
+  
+  .greetings {
+    font-size: 1.5rem;
+    max-width: 75%;
+  }
+  
+  .greetings {
+    font-size: 1.2rem;
+    max-width: 75%;
+  }
+  
+  .b1 {
+    width: 100%;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2rem;
+    max-width: 20rem;
+    text-align: center;
+  }
+  
+  .greetings {
+    font-size: 1.2rem;
+    max-width: 75%;
+  }
+  
+  .greetings {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  
+  .b1 {
+    width: 100%;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+}

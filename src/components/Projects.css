@@ -136,18 +136,46 @@ h3 {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 768px) {
-    .project-item {
-        width: calc(50% - 20px);
-    }
-}
-
 @media screen and (max-width: 480px) {
     .project-item {
         width: 100%;
     }
 
+    h3 {
+        font-size: 2rem;
+        line-height: 32px;
+        padding-left: 20px;
+    }
+
+    .projects {
+        padding: 30px;
+    }
+
+    .projects.container {
+        margin-left: -5%;
+        margin-right: -5%;
+    }
+
+    .projects-row {
+        flex-direction: column;
+        margin-left: -5%;
+        margin-right: -5%;
+    }
+
+    .project-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+
     .projects h1 {
         padding-left: 20px;
+    }
+
+    .projects-box-text-button button {
+        font-size: 10px;
+    }
+
+    .projects-box-text-link a {
+        font-size: 10px;
     }
 }
