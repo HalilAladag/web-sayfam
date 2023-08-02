@@ -1,41 +1,89 @@
 import React from 'react';
-import texts from '../texts';
-import './Hero.css';
+import { useSpring, animated } from 'react-spring';
 
-const Hero = ({ language }) => {
-    return (
-        <div className='hero-container' id='heroSection'>
-            <div className='hero-container-left'>
-                <div className='hero-text'>
-                    <div className='line-name'>
-                        <h4 className='name'>Halil İbrahim Aladağ</h4>
-                    </div>
-                    <h1 className='head1'>{language === 'tr' ? texts.tr.head1 : texts.en.head1}</h1>
-                    <p className='greetings'>
-                        {language === 'tr' ? texts.tr.greetings : texts.en.greetings}
-                    </p>
-                </div>
-                <div className='hero-buttons'>
-                    <button className='b1'>{language === 'tr' ? texts.tr.contactButton : texts.en.contactButton}</button>
-                    <button className='b1'>
-                        <img src='./Images/github.png' />
-                        <a href='https://github.com/HalilAladag' target='_blank' rel='noreferrer'>
-                            {language === 'tr' ? texts.tr.github : texts.en.github}
-                        </a>
-                    </button>
-                    <button className='b1'>
-                        <img src='./Images/LinkedIn.png' />
-                        <a href='https://www.linkedin.com/in/halil-ibrahim-alada%C4%9F-377554168/' target='_blank' rel='noreferrer'>
-                            {language === 'tr' ? texts.tr.linkedin : texts.en.linkedin}
-                        </a>
-                    </button>
-                </div>
-            </div>
-            <div className='hero-container-right'>
-                <img className="hero-img" src="./Images/HeroPic1.jpg" alt="profile" />
-            </div>
+const Hero = ({ language, darkMode }) => {
+  const content = {
+    en: {
+      greetings:
+        'Hi, I’m Halil. I’m a full-stack developer. If you are looking for a Developer who can craft solid and scalable frontend products with great user experiences, let’s shake hands with me.',
+      head1: 'Creative Thinker Minimalism Lover',
+      contactButton: 'Contact',
+      github: 'Github',
+      linkedin: 'LinkedIn',
+    },
+    tr: {
+      greetings:
+        'Merhaba, ben Halil! Ben bir full-stack yazılım geliştiricisiyim. Mükemmel kullanıcı deneyimleriyle sağlam ve ölçeklenebilir frontend ürünleri oluşturacak bir geliştirici arıyorsanız. Benimle el sıkışın.',
+      head1: 'Yaratıcı Düşünür  Minimalist Sever',
+      contactButton: 'İletişim',
+      github: 'Github',
+      linkedin: 'Linkedin',
+    },
+  };
+
+  const { greetings, head1, contactButton, github, linkedin } = content[language];
+
+  const imageAnimation = useSpring({
+    from: { opacity: 0, transform: 'translateX(-40px)' },
+    to: { opacity: 1, transform: 'translateX(0)' },
+    config: { duration: 800 },
+  });
+
+  return (
+    <div
+      className={`hero-container flex flex-col md:flex-row items-center ${
+        darkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'
+      } py-20 rounded-lg shadow-lg px-16 md:px-24 space-y-8 md:space-y-0 md:space-x-12`}
+      style={{
+        backgroundImage: `url('./Images/sky.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'left',
+      }}
+    >
+      <div className="md:w-1/2 md:pr-8 md:pl-20">
+        <animated.h1 className="text-4xl md:text-5xl font-bold mb-8 ml-0 md:ml-10">
+          {head1}
+        </animated.h1>
+        <animated.p className="text-xl md:text-xl mb-8 ml-0 md:ml-10">
+          {greetings}
+        </animated.p>
+        <div className="flex space-x-6 ml-0 md:ml-10">
+          <button
+            onClick={() => window.open('', '_blank')}
+            className={`px-6 py-3 rounded-full font-bold text-lg md:text-xl ${
+              darkMode ? 'bg-indigo-400 text-gray-900' : 'bg-indigo-600 text-white'
+            } hover:bg-indigo-500 cursor-pointer`}
+          >
+            {contactButton}
+          </button>
+          <button
+            onClick={() => window.open('https://github.com/HalilAladag', '_blank')}
+            className={`px-6 py-3 rounded-full font-bold text-lg md:text-xl ${
+              darkMode ? 'bg-gray-600 text-gray-100' : 'bg-indigo-600 text-white'
+            } hover:bg-gray-700 cursor-pointer`}
+          >
+            {github}
+          </button>
+          <button
+            onClick={() => window.open('https://www.linkedin.com/in/halil-ibrahim-alada%C4%9F-377554168/', '_blank')}
+            className={`px-6 py-3 rounded-full font-bold text-lg md:text-xl ${
+              darkMode ? 'bg-gray-300 text-indigo-600' : 'bg-indigo-600 text-white'
+            } hover:bg-gray-400 cursor-pointer`}
+          >
+            {linkedin}
+          </button>
         </div>
-    );
+      </div>
+      <div className="md:w-1/2 md:pl-20 md:text-center">
+        <animated.img
+          src="./Images/HeroPic1.jpg"
+          alt="Hero"
+          className="h-80 w-80 rounded-full mb-8 border-4 border-indigo-600 shadow-lg inline-block"
+          style={imageAnimation}
+        />
+      </div>
+    </div>
+  );
 };
 
 export default Hero;

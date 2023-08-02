@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useSpring, animated } from 'react-spring';
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Skills from "./components/Skills";
@@ -9,27 +10,24 @@ import "./App.css";
 
 const App = () => {
   const [language, setLanguage] = useState("tr");
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => !prevMode);
   };
 
+  const toggleLanguage = () => {
+    setLanguage((prevLang) => (prevLang === "tr" ? "en" : "tr"));
+  };
+
   return (
     <div className={`App ${darkMode ? "dark" : ""}`}>
-      <div className="top-buttons">
-        <div className="language-button">
-          <h2 onClick={() => setLanguage(language === "tr" ? "en" : "tr")}>
-            {language === "tr" ? "English" : "Türkçe"}
-          </h2>
-        </div>
-        <div className="toggle-button">
-          <h2 onClick={toggleDarkMode}>
-            {darkMode ? "Light Mode" : "Dark Mode"}
-          </h2>
-        </div>
-      </div>
-      <Header language={language} darkMode={darkMode} />
+      <Header
+        language={language}
+        darkMode={darkMode}
+        toggleDarkMode={toggleDarkMode}
+        toggleLanguage={toggleLanguage}
+      />
       <Hero language={language} darkMode={darkMode} />
       <Skills language={language} darkMode={darkMode} />
       <Profile language={language} darkMode={darkMode} />

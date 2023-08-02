@@ -25,7 +25,7 @@ const texts = {
         education: 'Eğitim Durumu',
         role: 'Tercih Ettiği Rol',
             //profile answer
-        edu: 'CBÜ,Makine Mühendisliği,Lisans,2021',
+        edu: 'Celal Bayar Üniversitesi, Makine Mühendisliği, Lisans, 2021',
             //about me
         about: 'Hakkımda',
         aboutp: '2021 yılında Celal Bayar Üniversitesi Makine Mühendisliği bölümünden mezun oldum. Uzun süredir ilgimi çeken programlama alanına olan merakımı takip ederek, özenle hazırladığım bir plan ve yol haritasıyla bu alana geçiş yaptım. Kesin kararlar almak adına, University Of Michigan tarafından sunulan 19 saatlik Python eğitimini Coursera üzerinden başarıyla tamamladım. Ardından, Workintech tarafından düzenlenen 6 aylık hızlandırılmış ve yoğun Full Stack Web Geliştirici kursuna kayıt oldum. Sürekli Projeler ve araştırmalar yaparak kendimi geliştirmeye, yeni teknolojilere adapte olmaya ve sınırlarımı zorlamaya devam edeceğim. ',
