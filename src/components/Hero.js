@@ -31,26 +31,34 @@ const Hero = ({ language, darkMode }) => {
 
   return (
     <div
-      className={`hero-container flex flex-col md:flex-row items-center ${
+      className={`hero-container flex flex-col items-center ${
         darkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'
-      } py-20 rounded-lg shadow-lg px-16 md:px-24 space-y-8 md:space-y-0 md:space-x-12`}
+      } py-12 md:py-20 rounded-lg shadow-lg px-6 md:px-16 space-y-8`}
       style={{
         backgroundImage: `url('./Images/sky.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'left',
       }}
     >
-      <div className="md:w-1/2 md:pr-8 md:pl-20">
-        <animated.h1 className="text-4xl md:text-5xl font-bold mb-8 ml-0 md:ml-10">
+      <div className="md:w-1/2 md:text-center">
+        <animated.img
+          src="./Images/HeroPic1.jpg"
+          alt="Hero"
+          className="h-48 md:h-80 w-48 md:w-80 rounded-full mb-8 border-4 border-indigo-600 shadow-lg inline-block"
+          style={imageAnimation}
+        />
+      </div>
+      <div className="md:w-1/2">
+        <animated.h1 className="text-2xl md:text-4xl font-bold mb-4 md:mb-8">
           {head1}
         </animated.h1>
-        <animated.p className="text-xl md:text-xl mb-8 ml-0 md:ml-10">
+        <animated.p className="text-sm md:text-xl mb-4 md:mb-8">
           {greetings}
         </animated.p>
-        <div className="flex space-x-6 ml-0 md:ml-10">
+        <div className="flex space-x-4">
           <button
             onClick={() => window.open('', '_blank')}
-            className={`px-6 py-3 rounded-full font-bold text-lg md:text-xl ${
+            className={`px-4 py-2 rounded-full font-bold text-sm md:text-lg ${
               darkMode ? 'bg-indigo-400 text-gray-900' : 'bg-indigo-600 text-white'
             } hover:bg-indigo-500 cursor-pointer`}
           >
@@ -58,7 +66,7 @@ const Hero = ({ language, darkMode }) => {
           </button>
           <button
             onClick={() => window.open('https://github.com/HalilAladag', '_blank')}
-            className={`px-6 py-3 rounded-full font-bold text-lg md:text-xl ${
+            className={`px-4 py-2 rounded-full font-bold text-sm md:text-lg ${
               darkMode ? 'bg-gray-600 text-gray-100' : 'bg-indigo-600 text-white'
             } hover:bg-gray-700 cursor-pointer`}
           >
@@ -66,21 +74,13 @@ const Hero = ({ language, darkMode }) => {
           </button>
           <button
             onClick={() => window.open('https://www.linkedin.com/in/halil-ibrahim-alada%C4%9F-377554168/', '_blank')}
-            className={`px-6 py-3 rounded-full font-bold text-lg md:text-xl ${
+            className={`px-4 py-2 rounded-full font-bold text-sm md:text-lg ${
               darkMode ? 'bg-gray-300 text-indigo-600' : 'bg-indigo-600 text-white'
             } hover:bg-gray-400 cursor-pointer`}
           >
             {linkedin}
           </button>
         </div>
-      </div>
-      <div className="md:w-1/2 md:h1/2 md:pl-20 md:text-center">
-        <animated.img
-          src="./Images/HeroPic1.jpg"
-          alt="Hero"
-          className="h-80 w-80 rounded-full mb-8 border-4 border-indigo-600 shadow-lg inline-block"
-          style={imageAnimation}
-        />
       </div>
     </div>
   );
