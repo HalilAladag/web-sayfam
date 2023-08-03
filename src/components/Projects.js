@@ -3,7 +3,7 @@ import { projectsData, projectsDataTr } from './ProjectsData';
 import { Link } from 'react-scroll';
 
 const Projects = ({ language, darkMode }) => {
-  const projectsData1 = language === 'tr' ? projectsDataTr : projectsData;
+  const projectsData1 = language === 'tr' ? projectsData : projectsDataTr;
 
   return (
     <section
