@@ -74,7 +74,7 @@ const Hero = ({ language, darkMode }) => {
           </button>
         </div>
       </div>
-      <div className="md:w-1/2 md:pl-20 md:text-center">
+      <div className="md:w-1/2 md:h1/2 md:pl-20 md:text-center">
         <animated.img
           src="./Images/HeroPic1.jpg"
           alt="Hero"
