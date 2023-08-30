@@ -1,11 +1,11 @@
 import React from 'react';
-import { useSpring, animated } from 'react-spring';
+import { useSpring, } from 'react-spring';
 
 const Hero = ({ language, darkMode }) => {
   const content = {
     en: {
       greetings:
-        'Hi, I’m Halil. I’m a full-stack developer. If you are looking for a Developer who can craft solid and scalable frontend products with great user experiences, let’s shake hands with me.',
+        'Hi, I’m Halil. I’m a full-stack developer. If you are looking for a Developer who can craft solid and scalable products with great user experiences, let’s shake hands with me.',
       head1: 'Creative Thinker Minimalism Lover',
       contactButton: 'Contact',
       github: 'Github',
@@ -13,8 +13,9 @@ const Hero = ({ language, darkMode }) => {
     },
     tr: {
       greetings:
-        'Merhaba, ben Halil! Ben bir full-stack yazılım geliştiricisiyim. Mükemmel kullanıcı deneyimleriyle sağlam ve ölçeklenebilir frontend ürünleri oluşturacak bir geliştirici arıyorsanız. Benimle el sıkışın.',
-      head1: 'Yaratıcı Düşünür Minimalist Sever',
+        'Merhaba, ben Halil! Ben bir full-stack yazılım geliştiricisiyim. Mükemmel kullanıcı deneyimleriyle sağlam ve ölçeklenebilir ürünler oluşturacak bir geliştirici arıyorsanız. Benimle iletişime geçin.',
+      
+        head1: 'Yaratıcı Düşünür Minimalist Sever',
       contactButton: 'İletişim',
       github: 'Github',
       linkedin: 'Linkedin',
@@ -23,11 +24,6 @@ const Hero = ({ language, darkMode }) => {
 
   const { greetings, head1, contactButton, github, linkedin } = content[language];
 
-  const imageAnimation = useSpring({
-    from: { opacity: 0, transform: 'translateX(-40px)' },
-    to: { opacity: 1, transform: 'translateX(0)' },
-    config: { duration: 800 },
-  });
 
   return (
     <div
@@ -41,19 +37,18 @@ const Hero = ({ language, darkMode }) => {
       }}
     >
       <div className="md:flex md:items-center md:w-4/5 mx-auto">
-        <animated.img
+        <img
           src="./Images/HeroPic1.jpg"
           alt="Hero"
           className="h-48 md:h-80 w-48 md:w-80 rounded-full mb-8 border-4 border-indigo-600 shadow-lg inline-block md:mr-12"
-          style={imageAnimation}
         />
         <div>
-          <animated.h1 className="text-6xl md:text-6xl font-bold mb-4 md:mb-8 text-stone-300">
+          <h1 className="text-6xl md:text-6xl font-bold mb-4 md:mb-8 text-stone-300">
             {head1}
-          </animated.h1>
-          <animated.p className="text-sm md:text-2xl mb-8 md:mb-8">
+          </h1>
+          <p className="text-sm md:text-2xl mb-8 md:mb-8">
             {greetings}
-          </animated.p>
+          </p>
           <div className="flex space-x-4">
             <button
               onClick={() => window.open('', '_blank')}

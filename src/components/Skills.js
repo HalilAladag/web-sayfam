@@ -26,6 +26,23 @@ const Skills = ({ language, darkMode }) => {
       title: 'Cypress',
       description: language === 'tr' ? 'Kullanıcılarınızın hangi tanımlama bilgilerini kabul edeceklerini veya reddedeceklerini seçmelerine olanak tanıyan basit, özelleştirilebilir, minimum kurulumlu bir tanımlama bilgisi eklentisi. Bu, vanilya JS, SCSS ve Parcel Bundler ile oluşturulmuştur ve bir NPM paketi olarak mevcuttur ve git deposu, kod ve temalar için her türlü özelleştirmeyi mümkün kılar.' : 'A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.'
     },
+    {
+      title: language === 'tr' ? 'Java' : 'Java',
+      description: language === 'tr' ? 'Java çok platformlu, nesne odaklı ve ağ merkezli bir dil olup kendisi de bir platform olarak kullanılabilir. Mobil uygulamalar ve kurumsal yazılımlardan büyük veri uygulamalarına ve sunucu tarafı teknolojilere kadar her türlü yazılımı kodlamada kullanılabilecek hızlı, güvenli ve güvenilir bir programlama dilidir.' : 'Java is a multi-platform, object-oriented and network-centric language that can itself be used as a platform. It is a fast, secure and reliable programming language that can be used to code all kinds of software, from mobile applications and enterprise software to big data applications and server-side technologies.'
+    },
+    {
+      title: language === 'tr' ? 'Python' : 'Python',
+      description: language === 'tr' ? 'Python; sistem programlama, kullanıcı arabirimi programlama, ağ programlama, web programlama, uygulama ve veri tabanı yazılımı programlama gibi birçok alanda yazılım geliştirebilen bir yazılım dilidir' : 'Python is a software language that can develop software in many areas such as system programming, user interface programming, network programming, web programming, application and database software programming.'
+    },
+    {
+      title: language === 'tr' ? 'Java Spring' : 'Java Spring',
+      description: language === 'tr' ? 'Spring, kurumsal uygulamalar geliştirmek için kullanılan Java tabanlı bir web çerçevesidir. Minimum kodlama ile web uygulamaları geliştirmek için esnek bir platform sağlar. Finans, e-ticaret ve sağlık gibi çeşitli sektörlerde sıklıkla tercih edilir. Spring, kurumsal Java geliştirmeyi destekleyen bir çerçevedir.' : 'Spring is a Java-based web framework used for developing enterprise applications. It provides a flexible platform for developing web applications with minimal coding. It is often preferred in various industries such as finance, e-commerce and healthcare. Spring is a framework that supports enterprise Java development.'
+    },
+    {
+      title: language === 'tr' ? 'SQL' : 'SQL',
+      description: language === 'tr' ? 'Yapılandırılmış sorgu dili (SQL), bilgileri ilişkisel bir veri tabanında depolamak ve işlemek için kullanılan bir programlama dilidir. İlişkisel bir veri tabanı, farklı veri niteliklerini ve veri değerleri arasındaki çeşitli ilişkileri temsil eden satırlar ve sütunlar ile bilgileri tablo biçiminde depolar.' : 'Structured query language (SQL) is a programming language used to store and manipulate information in a relational database. A relational database stores information in tabular format, with rows and columns representing different data attributes and various relationships between data values.'
+    },
+   
   ];
 
   const [selectedSkillIndex, setSelectedSkillIndex] = useState(null);
